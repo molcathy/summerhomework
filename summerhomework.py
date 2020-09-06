@@ -1,25 +1,19 @@
-fruits = ["apple", "pear", "orange", "grape", "peach"]
+fruits = ["apple", "grape", "orange", "peach", "pear"]
 trials = 2
 rounds = 1
+message1 = f"Please enter a number from 1 - {len(fruits)} to get a fruit: "
+message2 = f"You did not enter a number. Try again!\n"
+message3 = f"You number is not from 1 - {len(fruits)}. Try again!\n"
 
 while trials >= rounds:
-	number_fruit = int(input("Please enter a number from 1 - 5 to get a fruit: "))
-	if number_fruit == 1:
-		print(fruits[0])
-		rounds += 1
-	elif number_fruit == 2:
-		print(fruits[1])
-		rounds += 1
-	elif number_fruit == 3:
-		print(fruits[2])
-		rounds += 1
-	elif number_fruit == 4:
-		print(fruits[3])
-		rounds += 1
-	elif number_fruit == 5:
-		print(fruits[4])
-		rounds += 1
+	try:
+	   fruit_number = int(input(message1))
+	except ValueError:
+	   print(message2)
 	else:
-		print("You did not enter a number from 1-5, you can try again")
-		rounds += 1
-
+		if fruit_number < 0 or fruit_number > len(fruits):
+			print(message3)
+		else:
+			fruits.sort()
+			print(fruits[fruit_number - 1], "\n")
+			rounds += 1

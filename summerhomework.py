@@ -2,6 +2,8 @@ fruits = ["apple", "pear", "orange", "grape", "peach"]
 trials = 2
 rounds = 1
 
+# test1
+
 while trials >= rounds:
 	number_fruit = int(input("Please enter a number from 1 - 5 to get a fruit: "))
 	if number_fruit == 1:

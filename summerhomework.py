@@ -1,26 +1,26 @@
-apple = 1
-pear = 2
-orange = 3
-grape = 4
-peach = 5
-list = [apple, pear, orange, grape, peach]
-num = 1
-while num == 1:
-	number_fruit = input(int("Please enter a number from 1-5 to get a fruit:"))
+fruits = ["apple", "pear", "orange", "grape", "peach"]
+
+number_fruit = int(input("Please enter a number from 1 - 5 to get a fruit: "))
+
+trials = 1
+runs = 0
+
+while trials >= runs:
 	if number_fruit == 1:
-		print(list[0])
-		num = num + number_fruit
+		print(fruits[0])
+		runs += 1
 	elif number_fruit == 2:
-		print(list[1])
-		num = num + number_fruit
+		print(fruits[1])
+		runs += 1
 	elif number_fruit == 3:
-		print(list[2])
-		num = num + number_fruit
+		print(fruits[2])
+		runs += 1
 	elif number_fruit == 4:
-		print(list[3])
-		num = num + number_fruit
+		print(fruits[3])
+		runs += 1
 	elif number_fruit == 5:
-		print(list[4])
-		num = num + number_fruit
+		print(fruits[4])
+		runs += 1
 	else:
 		print("You did not enter a number from 1-5, you can try again")
+		runs += 1

@@ -4,7 +4,7 @@ orange = 3
 grape = 4
 peach = 5
 list = [apple, pear, orange, grape, peach]
-num = 0
+num = 1
 while num == 1:
 	number_fruit = input(int("Please enter a number from 1-5 to get a fruit:"))
 	if number_fruit == 1:

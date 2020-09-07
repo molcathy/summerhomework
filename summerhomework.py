@@ -19,7 +19,17 @@ def get_user_input(m):
 
 fruits.sort()
 print(m1)
+# More Concise
+# while trials >= round:
+# 	m = f"\nEnter a number from 1 - {len(fruits)} to pick fruit #{round}: "
+# 	print(fruits[get_user_input(m) - 1])
+# 	round += 1
+
+# More Explicit
 while trials >= round:
-	m = f"\nEnter a number from 1 - {len(fruits)} to pick fruit #{round}: "
-	print(fruits[get_user_input(m) - 1])
-	round += 1
+  m = f"\nEnter a whole number from 1 - {len(fruits)} to pick fruit #{round}: "
+  user_input = get_user_input(m)
+  fruit_number = user_input - 1
+  fruit = fruits[fruit_number]
+  print(fruit)
+  round += 1

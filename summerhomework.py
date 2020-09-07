@@ -3,7 +3,7 @@ trials = 2
 rounds = 1
 
 while trials >= rounds:
-	number_fruit = int(input("Please enter a number from 1 - 5 to get a fruit: "))
+	number_fruit = int(input("Please enter a number from 0 - 4 to get a fruit: "))
 	if number_fruit == 1:
 		print(fruits[0])
 		rounds += 1
@@ -20,6 +20,6 @@ while trials >= rounds:
 		print(fruits[4])
 		rounds += 1
 	else:
-		print("You did not enter a number from 1-5, you can try again")
+		print("You did not enter a number from 0-4, you can try again")
 		rounds += 1
 

@@ -1,6 +1,6 @@
-condition = False
+integer = False
 
-while not condition:
+while not integer:
     n = input("Enter A number: ")
     isfloat = False
     for c in n:
@@ -10,4 +10,4 @@ while not condition:
             break
     if isfloat != True:
         print(n)
-        condition = True
+        integer = True
